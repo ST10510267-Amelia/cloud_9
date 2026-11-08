@@ -1,0 +1,186 @@
+/* Reset & Base Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #030712;
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header Navigation Bar */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 100;
+    background-color: rgba(4, 11, 28, 0.9);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 25px rgba(0, 132, 255, 0.45);
+}
+
+.navbar .logo .nav-logo-img {
+    height: 38px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    border-bottom-color: #ffffff;
+}
+
+.nav-links .divider {
+    color: #ffffff;
+    opacity: 0.5;
+    font-size: 12px;
+}
+
+/* Main Hero Split Layout */
+.hero-container {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 60px); /* Leaves room for footer */
+    padding-top: 85px; /* Offset for absolute navbar */
+}
+
+/* Left Hero Section */
+.hero-left {
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(circle at 40% 45%, #0d2763 0%, #050d24 60%, #02050e 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers elements vertically so everything moves up */
+    align-items: flex-start;
+    padding: 20px 60px;
+    gap: 30px; /* Controls spacing between text, big logo, and button */
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.hero-text p {
+    font-size: 15px;
+    color: #94a3b8;
+}
+
+/* Center Branding Graphic (Made Bigger) */
+.brand-graphic {
+    width: 100%;
+    max-width: 500px; /* Increased from 420px to make logo bigger */
+}
+
+.brand-graphic img.glowing-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 0 25px rgba(0, 140, 255, 0.8)) drop-shadow(0 0 10px rgba(0, 195, 255, 0.6));
+}
+
+/* CTA Pill Button */
+.btn-join {
+    display: inline-block;
+    padding: 14px 36px;
+    border: 1.5px solid rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.btn-join:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Right Hero Section */
+.hero-right {
+    width: 50%;
+    height: 100%;
+}
+
+.hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Stylized Footer */
+.site-footer {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(3, 7, 18, 0.95);
+    border-top: 1px solid rgba(0, 132, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 100;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.footer-links {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
