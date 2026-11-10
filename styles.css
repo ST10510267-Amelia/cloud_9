@@ -987,3 +987,9 @@ body {
 .menu-section-block {
     scroll-margin-top: 160px; /* Adjust this value (in pixels) so it stops cleanly below your sticky buttons */
 }
+.map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    /* True blue-scale filter: removes natural colors, darkens the base, and shifts everything into a rich blue hue */
+    filter: grayscale(100%) invert(92%) hue-rotate(180deg) brightness(85%) contrast(130%);
+}
