@@ -1,18 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
+<script>
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const navMenu = document.getElementById('nav-menu');
 
-    if (hamburgerBtn && navMenu) {
-        hamburgerBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevents any bubbling conflicts
+    if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
             navMenu.classList.toggle('active');
-        });
-
-        // Optional: Close menu when clicking outside of it on mobile
-        document.addEventListener('click', (e) => {
-            if (!hamburgerBtn.contains(e.target) && !navMenu.contains(e.target)) {
-                navMenu.classList.remove('active');
-            }
-        });
-    }
-});
+            console.log('Hamburger clicked!'); // Check your F12 console to see if this logs!
+        })
+    };
+</script>
