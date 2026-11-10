@@ -1318,3 +1318,62 @@ header.navbar {
         display: flex; /* or top: 70px / active state depending on your mobile layout CSS */
     }
 }
+/* ================= MOBILE HAMBURGER MENU STYLES ================= */
+
+/* Hide hamburger button on desktop screens */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+/* Mobile Styles (Screens 768px wide and below) */
+@media (max-width: 768px) {
+    /* Show the hamburger button */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        width: 100%;
+        height: 3px;
+        background-color: #00F0FF;
+        border-radius: 2px;
+        box-shadow: 0 0 8px rgba(0, 240, 255, 0.8);
+        transition: all 0.3s ease;
+    }
+
+    /* Hide the nav menu by default on mobile */
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #050505;
+        padding: 20px 0;
+        border-bottom: 2px solid #00F0FF;
+        box-shadow: 0 10px 25px rgba(0, 240, 255, 0.3);
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    /* THIS IS WHAT JS TRIGGERS: Displays the menu when active class is toggled */
+    .nav-menu.active {
+        display: flex !important;
+    }
+}
