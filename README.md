@@ -3,7 +3,7 @@
 A multi-page, fully responsive static website built for **Cloud 9 Sports Bar** in Umhlanga, South Africa. Designed with a dark neon aesthetic (`#030712`, deep blue gradients, and blue/red neon glows).
 
 ## Live Preview
-* **Hosted Live**: [Add your Netlify link here after hosting]
+* **Hosted Live**:(https://cloud-9-umhlanga.netlify.app/contact)
 
 ---
 
