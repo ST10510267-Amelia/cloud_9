@@ -1307,3 +1307,14 @@ header.navbar {
     color: #00F0FF !important;
     text-shadow: 0 0 10px rgba(0, 240, 255, 0.8);
 }
+/* Hide the checkbox input visually */
+.nav-toggle {
+    display: none;
+}
+
+/* Open menu when checkbox is checked on mobile */
+@media (max-width: 768px) {
+    .nav-toggle:checked ~ .nav-menu {
+        display: flex; /* or top: 70px / active state depending on your mobile layout CSS */
+    }
+}
