@@ -90,8 +90,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px 60px;
-    gap: 30px;
+    padding: 20px 70px;
+    gap: 0px;
 }
 
 .hero-text h1 {
@@ -949,4 +949,41 @@ body {
     width: 100%;
     height: 100%;
     filter: invert(90%) hue-rotate(180deg) contrast(120%) brightness(90%);
+}
+.navbar {
+    position: fixed; /* Keeps navigation pinned to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 1000;
+    background-color: rgba(4, 11, 28, 0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 25px rgba(0, 132, 255, 0.45);
+}
+.menu-jump-buttons {
+    position: sticky;
+    top: 105px; /* Sits right underneath the 85px fixed navbar with 20px breathing room */
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+    background: rgba(3, 7, 18, 0.85); /* Semi-transparent dark background so text behind it doesn't clash */
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    border-radius: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+/* Adds breathing room above section titles when jump links are clicked */
+.section-main-title, 
+.menu-section-block {
+    scroll-margin-top: 160px; /* Adjust this value (in pixels) so it stops cleanly below your sticky buttons */
 }
