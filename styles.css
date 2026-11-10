@@ -993,3 +993,48 @@ body {
     /* True blue-scale filter: removes natural colors, darkens the base, and shifts everything into a rich blue hue */
     filter: grayscale(100%) invert(92%) hue-rotate(180deg) brightness(85%) contrast(130%);
 }
+@media screen and (max-width: 768px) {
+    header.navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        overflow-x: auto; /* Allows smooth horizontal scrolling if screen is too small */
+    }
+
+    header.navbar nav ul {
+        display: flex;
+        gap: 8px; /* Reduces space between links */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    header.navbar nav a {
+        font-size: 11px; /* Shrinks text slightly so it fits mobile */
+        white-space: nowrap; /* Prevents words like "ABOUT US" from breaking */
+    }
+    
+    header.navbar .separator {
+        font-size: 11px;
+    }
+}
+/* Container holding your menu buttons */
+.menu-button-container {
+    display: flex;
+    flex-direction: row;        /* Forces items side-by-side */
+    justify-content: center;    /* Centers them horizontally */
+    align-items: center;
+    gap: 10px;                  /* Space between buttons */
+    flex-wrap: wrap;            /* Wraps nicely to the next line if screen is super narrow */
+    padding: 20px 10px;
+}
+
+/* Individual Menu Button styling */
+.menu-button-container a, 
+.menu-button-container button {
+    flex: 1;                    /* Allows them to share width equally */
+    min-width: 100px;           /* Prevents them from getting too squished */
+    text-align: center;
+    white-space: nowrap;        /* Keeps text on one line */
+}
