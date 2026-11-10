@@ -1038,3 +1038,272 @@ body {
     text-align: center;
     white-space: nowrap;        /* Keeps text on one line */
 }
+/* ==========================================
+   1. DESKTOP STYLES (Default)
+   ========================================== */
+
+/* Keep navbar links horizontal on desktop */
+.navbar nav ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+}
+
+/* Hide the 3-line icon on desktop screens */
+.hamburger {
+    display: none;
+}
+
+
+/* ==========================================
+   2. MOBILE STYLES (Only under 768px width)
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+    
+    /* Show the hamburger button on phones */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 26px;
+        height: 18px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        width: 100%;
+        height: 3px;
+        background-color: #ffffff;
+        border-radius: 2px;
+    }
+
+    /* Hide horizontal desktop nav list on mobile */
+    .nav-menu {
+        display: none; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #050505;
+        border-bottom: 2px solid #00F0FF;
+        padding: 20px 0;
+    }
+
+    /* Show dropdown menu when ☰ is tapped */
+    .nav-menu.active {
+        display: block;
+    }
+
+    /* Stack links vertically inside the mobile dropdown */
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 18px;
+        text-align: center;
+    }
+}
+/* ==========================================
+   HEADER & NAVBAR (Desktop Defaults)
+   ========================================== */
+
+header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #050505;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Logo Sizing */
+.navbar .logo img {
+    height: 40px; /* Adjust height to fit your logo image */
+    width: auto;
+    display: block;
+}
+
+/* Nav Menu Container */
+.nav-menu ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Link Color & Typography (Fixes dark purple text) */
+.nav-menu a {
+    color: #ffffff !important; /* Crisp white for readable links */
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+/* Active Link & Hover Effect */
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #00F0FF !important; /* Electric Blue Neon Accent */
+}
+
+/* Hide Hamburger Icon on Desktop */
+.hamburger {
+    display: none;
+}
+
+
+/* ==========================================
+   MOBILE NAVBAR OVERRIDES (Under 768px)
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 26px;
+        height: 18px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .hamburger span {
+        width: 100%;
+        height: 3px;
+        background-color: #ffffff;
+        border-radius: 2px;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #050505;
+        border-bottom: 2px solid #00F0FF;
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+.navbar .logo img {
+    height: 35px; /* Adjust this value as needed */
+    width: auto;
+    display: block;
+}
+/* Remove any bottom borders, shadows, or extra space from the navbar */
+header.navbar {
+    border-bottom: none !important;
+    box-shadow: none !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 10px; /* Adjust if needed */
+}
+
+/* Remove any top spacing from the hero section */
+.hero-container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #050505;
+    position: relative;
+    z-index: 1000;
+    
+    /* Neon LED Glow Effect */
+    border-bottom: 2px solid #00F0FF;
+    box-shadow: 0 4px 15px rgba(0, 240, 255, 0.5), 0 1px 30px rgba(0, 240, 255, 0.3);
+}
+header.navbar {
+    position: fixed;        /* Glues the navbar to the top of the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    background-color: #050505;
+    z-index: 9999;          /* Keeps it layered safely above all content */
+    
+    /* Neon LED Glow Effect */
+    border-bottom: 2px solid #00F0FF;
+    box-shadow: 0 4px 15px rgba(0, 240, 255, 0.5), 0 1px 30px rgba(0, 240, 255, 0.3);
+}
+/* Pushes the top of each page down just enough so content starts right below the fixed navbar */
+body {
+    padding-top: 75px; 
+}
+/* Reset browser defaults to remove invisible gaps at the very top */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #030712;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    padding-top: 70px; /* Pushes page content down so it doesn't hide behind the fixed header */
+}
+
+/* Fixed Navbar with Intense Blue LED Glow */
+header.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    background-color: #050505;
+    z-index: 9999;
+    
+    /* Vibrant Electric Blue Neon LED Glow */
+    border-bottom: 2.5px solid #00F0FF;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.8), 0 0 40px rgba(0, 140, 255, 0.5), inset 0 -2px 10px rgba(0, 240, 255, 0.6);
+}
+
+/* Ensure links stay crisp white and glow blue on hover */
+.nav-menu ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #00F0FF !important;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.8);
+}

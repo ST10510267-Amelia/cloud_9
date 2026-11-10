@@ -8,25 +8,32 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <header class="navbar">
-        <div class="logo">
-            <a href="index.html" aria-label="Cloud 9 Home">
-                <img src="_images/nav_logo.png" alt="Cloud 9 Logo" class="nav-logo-img">
-            </a>
-        </div>
-        <nav class="nav-links">
-            <a href="index.html">HOME</a>
-            <span class="divider">|</span>
-            <a href="about.html" class="active">ABOUT US</a>
-            <span class="divider">|</span>
-            <a href="menu.html">MENU</a>
-            <span class="divider">|</span>
-            <a href="events.html">EVENTS</a>
-            <span class="divider">|</span>
-            <a href="contact.html">CONTACT US</a>
-        </nav>
-    </header>
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html">
+            <!-- Fixed image path to use _images/ -->
+            <img src="_images/nav_logo.png" alt="Cloud 9 Logo">
+        </a>
+    </div>
+
+    <!-- Hamburger Icon Button (Mobile Only) -->
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Navigation Links -->
+    <nav class="nav-menu" id="nav-menu">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html" class="active">ABOUT US</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="events.html">EVENTS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+</header>
 
     <!-- Main Content Section (Reversed Layout for About Us) -->
     <main class="hero-container">
@@ -60,6 +67,16 @@
             </div>
         </div>
     </footer>
+
+    <!-- Hamburger Menu Toggle Script -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
