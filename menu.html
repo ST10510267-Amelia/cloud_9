@@ -16,6 +16,12 @@
         </a>
     </div>
 
+    <!-- Hamburger Icon Button (Properly placed inside header navbar) -->
+    <button class="hamburger" id="hamburger-btn" onclick="toggleMenu(event)" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
     <!-- Navigation Links -->
     <nav class="nav-menu" id="nav-menu">
@@ -332,16 +338,37 @@
         </div>
     </footer>
 
-    <!-- Link External JavaScript -->
-    <script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
 
-    <!-- Hamburger Icon Button -->
-<button class="hamburger" id="hamburger-btn" onclick="toggleMenu(event)" aria-label="Toggle navigation">
-    <span></span>
-    <span></span>
-    <span></span>
-    
-</button>
+        if (hamburgerBtn && navMenu) {
+            hamburgerBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!hamburgerBtn.contains(e.target) && !navMenu.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
+    });
+
+    // Toggle Hours Accordion Dropdown
+    function toggleHours() {
+        const panel = document.getElementById('hoursPanel');
+        const arrow = document.getElementById('arrowIcon');
+        if (panel) {
+            panel.classList.toggle('open');
+        }
+        if (arrow) {
+            arrow.classList.toggle('rotate');
+        }
+    }
+</script>
 </body>
 </html>
-

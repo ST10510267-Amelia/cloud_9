@@ -16,8 +16,8 @@
         </a>
     </div>
 
-    <!-- Hamburger Icon Button (Mobile Only) -->
-    <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation">
+    <!-- Hamburger Icon Button (Properly placed inside header navbar) -->
+    <button class="hamburger" id="hamburger-btn" onclick="toggleMenu(event)" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
@@ -67,16 +67,38 @@
             </div>
         </div>
     </footer>
-
-    <!-- Hamburger Menu Toggle Script -->
-    <script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
         const hamburgerBtn = document.getElementById('hamburger-btn');
         const navMenu = document.getElementById('nav-menu');
 
-        hamburgerBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-    </script>
+        if (hamburgerBtn && navMenu) {
+            hamburgerBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
 
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!hamburgerBtn.contains(e.target) && !navMenu.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
+    });
+
+    // Toggle Hours Accordion Dropdown
+    function toggleHours() {
+        const panel = document.getElementById('hoursPanel');
+        const arrow = document.getElementById('arrowIcon');
+        if (panel) {
+            panel.classList.toggle('open');
+        }
+        if (arrow) {
+            arrow.classList.toggle('rotate');
+        }
+    }
+
+</script>
 </body>
 </html>
