@@ -21,3 +21,27 @@ A multi-page, fully responsive static website built for **Cloud 9 Sports Bar** i
 * **Styling**: CSS3 (Flexbox, Grid, CSS Variables, Sticky Positioning, Responsive Media Queries)
 * **Interactivity**: Vanilla JavaScript (Accordion toggles)
 * **Hosting & Deployment**: Netlify / GitHub
+
+## Cross-Device Compatibility & Responsive Testing
+
+The Whisper web experience has been tested across mobile, tablet, and desktop viewports to ensure seamless visual layout integrity and fluid responsiveness.
+
+### Mobile Viewport (iPhone 16)
+| Page | Preview |
+| :--- | :--- |
+| **Home (`index.html`)** | ![Mobile Home](<images/index.html_iPhone_16.png>) |
+| **About Us (`about.html`)** | ![Mobile About](<images/about.html_iPhone_16.png>) |
+| **The Menu (`menu.html`)** | ![Mobile Menu](<images/menu.html_iPhone_16.png>) |
+| **Events (`events.html`)** | ![Mobile Events](<images/events.html_iPhone_16.png>) |
+| **Contact Us (`contact.html`)** | ![Mobile Contact](<images/contact.html_iPhone_16.png>) |
+
+---
+
+### Desktop / Large Display Viewport (Nest Hub Max)
+| Page | Preview |
+| :--- | :--- |
+| **Home (`index.html`)** | ![Desktop Home](<images/index.html_Nest_Hub_Max.png>) |
+| **About Us (`about.html`)** | ![Desktop About](<images/about.html_Nest_Hub_Max.png>) |
+| **The Menu (`menu.html`)** | ![Desktop Menu](<images/menu.html_Nest_Hub_Max.png>) |
+| **Events (`events.html`)** | ![Desktop Events](<images/events.html_Nest_Hub_Max.png>) |
+| **Contact Us (`contact.html`)** | ![Desktop Contact](<images/contact.html_Nest_Hub_Max.png>) |
