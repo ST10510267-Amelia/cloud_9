@@ -29,19 +29,19 @@ The Whisper web experience has been tested across mobile, tablet, and desktop vi
 ### Mobile Viewport (iPhone 16)
 | Page | Preview |
 | :--- | :--- |
-| **Home (`index.html`)** | ![Mobile Home](<images/index.html_iPhone_16.png>) |
-| **About Us (`about.html`)** | ![Mobile About](<images/about.html_iPhone_16.png>) |
-| **The Menu (`menu.html`)** | ![Mobile Menu](<images/menu.html_iPhone_16.png>) |
-| **Events (`events.html`)** | ![Mobile Events](<images/events.html_iPhone_16.png>) |
-| **Contact Us (`contact.html`)** | ![Mobile Contact](<images/contact.html_iPhone_16.png>) |
+| **Home (`index.html`)** | ![Mobile Home](<_images/index.html_iPhone_16.png>) |
+| **About Us (`about.html`)** | ![Mobile About](<_images/about.html_iPhone_16.png>) |
+| **The Menu (`menu.html`)** | ![Mobile Menu](<_images_/menu.html_iPhone_16.png>) |
+| **Events (`events.html`)** | ![Mobile Events](<_images/events.html_iPhone_16.png>) |
+| **Contact Us (`contact.html`)** | ![Mobile Contact](<_images/contact.html_iPhone_16.png>) |
 
 ---
 
 ### Desktop / Large Display Viewport (Nest Hub Max)
 | Page | Preview |
 | :--- | :--- |
-| **Home (`index.html`)** | ![Desktop Home](<images/index.html_Nest_Hub_Max.png>) |
-| **About Us (`about.html`)** | ![Desktop About](<images/about.html_Nest_Hub_Max.png>) |
-| **The Menu (`menu.html`)** | ![Desktop Menu](<images/menu.html_Nest_Hub_Max.png>) |
-| **Events (`events.html`)** | ![Desktop Events](<images/events.html_Nest_Hub_Max.png>) |
-| **Contact Us (`contact.html`)** | ![Desktop Contact](<images/contact.html_Nest_Hub_Max.png>) |
+| **Home (`index.html`)** | ![Desktop Home](<_images/index.html_Nest_Hub_Max.png>) |
+| **About Us (`about.html`)** | ![Desktop About](<_images/about.html_Nest_Hub_Max.png>) |
+| **The Menu (`menu.html`)** | ![Desktop Menu](<_images/menu.html_Nest_Hub_Max.png>) |
+| **Events (`events.html`)** | ![Desktop Events](<_images/events.html_Nest_Hub_Max.png>) |
+| **Contact Us (`contact.html`)** | ![Desktop Contact](<_images/contact.html_Nest_Hub_Max.png>) |
